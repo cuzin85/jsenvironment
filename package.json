@@ -1,0 +1,33 @@
+{
+  "name": "jsenv",
+  "version": "1.0.0",
+  "description": "Starter JS Project",
+  "main": "main.js",
+  "scripts": {
+    "prestart": "babel-node buildScripts/startMessage",
+    "start": "npm run server",
+    "poststart": "babel-node buildScripts/endMessage",
+    "server": "babel-node buildScripts/devServer"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cuzin85/jsenvironment.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cuzin85/jsenvironment/issues"
+  },
+  "homepage": "https://github.com/cuzin85/jsenvironment#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-latest": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "express": "^4.15.4",
+    "open": "0.0.5",
+    "chalk": "latest"
+  }
+}
