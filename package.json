@@ -5,10 +5,11 @@
   "main": "main.js",
   "scripts": {
     "prestart": "babel-node buildScripts/startMessage",
-    "start": "npm-run-all --parallel server security-check",
+    "start": "npm-run-all --parallel server security-check share",
     "endmessage": "babel-node buildScripts/endMessage",
     "server": "babel-node buildScripts/devServer",
-    "security-check": "nsp check"
+    "security-check": "nsp check",
+    "share": "lt --port 3010 --subdomain jsenv"
   },
   "repository": {
     "type": "git",
@@ -29,6 +30,7 @@
     "babel-register": "^6.26.0",
     "chalk": "latest",
     "express": "^4.15.4",
+    "localtunnel": "^1.8.3",
     "npm-run-all": "^4.1.1",
     "nsp": "^2.7.0",
     "open": "0.0.5"
