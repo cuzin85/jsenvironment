@@ -5,9 +5,10 @@
   "main": "main.js",
   "scripts": {
     "prestart": "babel-node buildScripts/startMessage",
-    "start": "npm run server",
-    "poststart": "babel-node buildScripts/endMessage",
-    "server": "babel-node buildScripts/devServer"
+    "start": "npm-run-all --parallel server security-check",
+    "endmessage": "babel-node buildScripts/endMessage",
+    "server": "babel-node buildScripts/devServer",
+    "security-check": "nsp check"
   },
   "repository": {
     "type": "git",
@@ -26,8 +27,10 @@
     "babel-loader": "^7.1.2",
     "babel-preset-latest": "^6.24.1",
     "babel-register": "^6.26.0",
+    "chalk": "latest",
     "express": "^4.15.4",
-    "open": "0.0.5",
-    "chalk": "latest"
+    "npm-run-all": "^4.1.1",
+    "nsp": "^2.7.0",
+    "open": "0.0.5"
   }
 }
