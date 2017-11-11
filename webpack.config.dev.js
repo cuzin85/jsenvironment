@@ -8,8 +8,8 @@ export default {
     ],
     target: 'web',
     output: {
-        path: path.resolve(__dirname, 'src'),
         publicPath: '/',
+        path: path.resolve(__dirname, 'public'),
         filename: 'bundle.js'
     },
     plugins: [
@@ -19,7 +19,7 @@ export default {
         rules: [
             {
                 test: /\.js$/,
-                exclude: /(node_modules|bower_components)/,
+                exclude: /node_modules/,
                 use: {
                     loader: 'babel-loader'
                 }
